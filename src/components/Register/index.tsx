@@ -1,5 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { useLogin } from '../../hooks/useLogin';
+import { toast } from 'react-toastify';
+
 
 export function Register() {
     const [email, setEmail] = useState('')
@@ -7,15 +9,19 @@ export function Register() {
     const [verifyPassword, setVerifyPassword] = useState('');
     const { handleRegister } = useLogin();
 
-    function handleSubmit(event: FormEvent) {
+    async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
         let formInfo = { email, password }
 
         if( password === verifyPassword ) {
-            handleRegister(formInfo)
+            let res = await handleRegister(formInfo);
+            if(res) {
+                toast.error(res);
+            }
+            
         }else {
-            alert('As senhas não são iguais')
+            toast.error('As senhas não são iguais')
         }
     }
 
@@ -28,7 +34,7 @@ export function Register() {
                 <input type="password" placeholder="Digite novamente sua senha" value={verifyPassword} onChange={e => setVerifyPassword(e.target.value)} />
 
 
-                <button className="blue_button" type="submit">Criar cadastro</button>
+                <button className="submit_button" type="submit">Criar cadastro</button>
             </form>
         </div>
     )

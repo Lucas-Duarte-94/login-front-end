@@ -1,0 +1,124 @@
+.header_content {
+    max-width: 920px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo_area {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 4px;
+
+        img {
+            margin-top: 6px;
+            width: 86.4px;
+            height: 36px;
+        }
+    }
+
+    .menu_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 32px;
+    }
+    
+    .menu {
+        color: var(--gray-text);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        position: relative;
+
+        height: 60px;
+        line-height: 60px;
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--heading-white)
+        }
+    }
+
+    .menu_active {
+        color: var(--gray-text);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        position: relative;
+
+        height: 60px;
+        line-height: 60px;
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--heading-white)
+        }
+
+        &::after {
+            content: '';
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+            width: 100%;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            background: var(--highlight-blue);
+        }
+    }
+    
+
+
+    h1 {
+        color: var(--heading-white);
+    }
+}
+
+.container {
+    height: 60px;
+    background: var(--black-700);
+    width: 100vw;
+
+}
+
+.do_login {
+    border: 1px solid var(--heading-white);
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    a {
+        color: var(--gray-text);
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--heading-white)
+        }
+    }
+
+    transition: a 0.3s;
+
+    &:hover {
+        a{
+            color: var(--heading-white);
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.content {
+    max-width: 920px;
+    margin: 0 auto;
+
+    margin-top: 40px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 40px;
+
+        .basic_infos {
+            display: flex;
+            flex-direction: row;
+
+            gap: 40px;
+            
+            .image {
+                display: flex;
+                margin-top: 16px;
+                
+            }
+    
+            .infos {
+                display: flex;
+                gap: 10px;
+    
+                flex-direction: column;
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    filter: invert(0.8);
+                }
+            }
+        }
+
+
+        input {
+            width: 300px;
+            padding: 8px;
+            background: var(--black-700);
+            border: 0;
+            border-bottom: 1px solid var(--heading-white);
+            margin-bottom: 16px;
+    
+            color: var(--gray-text);
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        border: 2px dashed var(--gray-text);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: var(--black-900);
+
+        .icon {
+            position: absolute;
+            top: 30%;
+            color: var(--gray-text);
+            width: 50px;
+            height: 50px;
+        }
+
+        img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+
+        span {
+            white-space: nowrap;
+            position: absolute;
+            top: 60%;
+            left: 22.5%;
+            
+        }
+    }
+
+    .file_area {
+        margin-top: 16px;
+        opacity: 0.0;
+        height: 200px;
+        width: 200px;
+        border: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .img_size {
+        margin-top: 2px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .border_none{
+        border: 0;
+    }
+
+    .address {
+        margin-top: 20px;
+        input {
+            width: 540px;
+        }
+    }
+
+    .state-city {
+        display: flex;
+        gap: 40px;
+        margin-top: 20px;
+
+        input{
+            width:250px
+        }
+    }
+
+    .submit_button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 24px;
+        min-width: 120px;
+        background: linear-gradient(90deg, rgba(0,178,237,1) 0%, rgba(0,117,197,1) 100%, rgba(0,212,255,1) 100%);
+
+        font-weight: bold;
+        font-size: 16px;
+
+        cursor: pointer;
+    }
+    
+}

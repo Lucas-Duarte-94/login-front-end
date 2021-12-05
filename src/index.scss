@@ -2,9 +2,16 @@
   --black-900: #000000;
   --black-700: #1d2226;
   --heading-white: #e7e7e8;
-  --blue-button: #70b5f9;
+  --blue-button: #0079c9;                                        //--blue-button: #70b5f9;
+  --highlight-blue: #00b2ed;
   --white-button-border: #e9e9ea;
   --gray-text: #a4a6a7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {

@@ -1,7 +1,21 @@
 .App {
-    max-width: 920px;
-    margin: 0 auto;
-
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--black-700) inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--gray-text) !important;
+    
+}
+
+input {
+    caret-color: var(--gray-text);
 }
